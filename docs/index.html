@@ -8,6 +8,7 @@
   <link href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet"/>
   <link rel="stylesheet" href="dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
   <script src="//code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -108,6 +109,13 @@
       padding: 40px 0;
     }
   }
+  .gallery-slider img{
+    width: 320px;
+    height: 240px;
+  }
+  .gallery-slider .slick-dots{
+    background-color: #a7a7a7;
+  }
 </style>
 <body>
 <header>
@@ -184,6 +192,29 @@
         </div>
       </div>
       <section class="wf-notosansjapanese contact">
+        <h2 class="section-title">ギャラリー
+          <small class="section-title-en">gallery</small>
+        </h2>
+        <div class="gallery-slider">
+          <div><img src="dist/images/slider/1.jpg" alt=""></div>
+          <div><img src="dist/images/slider/2.jpg" alt=""></div>
+          <div><img src="dist/images/slider/3.jpg" alt=""></div>
+          <div><img src="dist/images/slider/4.jpg" alt=""></div>
+          <div><img src="dist/images/slider/5.jpg" alt=""></div>
+          <div><img src="dist/images/slider/6.jpg" alt=""></div>
+          <div><img src="dist/images/slider/7.jpg" alt=""></div>
+          <div><img src="dist/images/slider/8.jpg" alt=""></div>
+          <div><img src="dist/images/slider/9.jpg" alt=""></div>
+          <div><img src="dist/images/slider/10.jpg" alt=""></div>
+          <div><img src="dist/images/slider/11.jpg" alt=""></div>
+          <div><img src="dist/images/slider/12.jpg" alt=""></div>
+          <div><img src="dist/images/slider/13.jpg" alt=""></div>
+          <div><img src="dist/images/slider/14.jpg" alt=""></div>
+          <div><img src="dist/images/slider/15.jpg" alt=""></div>
+          <div><img src="dist/images/slider/16.jpg" alt=""></div>
+        </div>
+      </section>
+      <section class="wf-notosansjapanese contact">
         <h2 class="section-title">お問い合わせ
           <small class="section-title-en">contact</small>
         </h2>
@@ -209,6 +240,33 @@
     touchMove: 'false',
     pauseOnHover: 'false',
   });
+  $('.gallery-slider').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
 </script>
 </body>
 </html>
