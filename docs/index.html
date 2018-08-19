@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="robots" content="noindex,nofollow">
-  <title>渡司憲一｜Watashi Kenichi</title>
-  <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet"/>
+  <title>渡司憲一｜Kenichi Watashi</title>
+
   <link rel="stylesheet" href="dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
+  <link rel="stylesheet" href="dist/css/slick-lightbox.css">
   <script src="//code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="dist/js/slick-lightbox.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="渡司憲一｜Watashi Kenichi">
 </head>
@@ -21,10 +22,10 @@
   }
   body {
     font-size: 1.5rem;
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    font-family: "游明朝体", "YuMincho", "游明朝", "Yu Mincho", Georgia, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN W3", HiraMinProN-W3, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    color: #666;
   }
-
   a {
     color: inherit;
     display: inline-block;
@@ -52,12 +53,15 @@
     padding-left: 0;
     margin-bottom: 1em;
   }
-  .block-list-item{
+  .thanks-text {
+    font-size: 2rem;
+    margin-top: 30px;
+  }
+  .block-list-item {
     margin-bottom: 10px;
   }
-  .wf-notosansjapanese { font-family: "notosansjapanese"; }
   section {
-    padding: 40px 0;
+    padding: 20px 0;
   }
   .main-slider {
     background-color: rgba(0, 0, 0, 0.8);
@@ -89,6 +93,7 @@
     justify-content: center;
     align-items: center;
     font-size: 5rem;
+    font-family: Georgia;
     color: #fff;
     text-shadow: 1px 1px 2px #000;
   }
@@ -100,7 +105,7 @@
   }
   .section-title-en {
     display: block;
-    font-family: 'Lato', sans-serif;
+    font-family: Georgia;
     text-transform: capitalize;
     font-size: 2rem;
   }
@@ -109,12 +114,14 @@
       padding: 40px 0;
     }
   }
-  .gallery-slider img{
-    width: 320px;
+  .gallery-slider img {
+    width: 90%;
     height: 240px;
+    
   }
-  .gallery-slider .slick-dots{
-    background-color: #a7a7a7;
+  .slick-lightbox .slick-lightbox-inner .slick-lightbox-slick.slick-caption-dynamic .slick-lightbox-slick-item .slick-lightbox-slick-caption,
+  .slick-lightbox .slick-lightbox-inner .slick-lightbox-slick .slick-lightbox-slick-item .slick-lightbox-slick-item-inner {
+    max-width: 90%;
   }
 </style>
 <body>
@@ -130,7 +137,7 @@
             <div class="slide-image slide-media" style="background-image:url(dist/images/slider/1.jpg);">
               <img data-lazy="dist/images/slider/1.jpg" class="image-entity"/>
             </div>
-            <figcaption class="caption">Watashi Kenich</figcaption>
+            <figcaption class="caption">Kenich Watashi</figcaption>
           </figure>
 
         </div>
@@ -139,7 +146,7 @@
             <div class="slide-image slide-media" style="background-image:url(dist/images/slider/2.jpg);">
               <img data-lazy="dist/images/slider/2.jpg" class="image-entity"/>
             </div>
-            <figcaption class="caption">Watashi Kenich</figcaption>
+            <figcaption class="caption">Kenich Watashi</figcaption>
           </figure>
         </div>
         <div class="item">
@@ -147,19 +154,23 @@
             <div class="slide-image slide-media" style="background-image:url(dist/images/slider/3.jpg);">
               <img data-lazy="dist/images/slider/3.jpg" class="image-entity"/>
             </div>
-            <figcaption class="caption">Watashi Kenich</figcaption>
+            <figcaption class="caption">Kenich Watashi</figcaption>
           </figure>
         </div>
       </div>
     </div>
 
     <div class="container">
+      <p class="thanks-text text-center">ホームページをご覧頂き <br class="d-md-none">ありがとうございます。</p>
+      <section class=" contact">
+        <h2 class="section-title">お仕事のご相談など</h2>
+        <a href="mailto:kitamura@bre-men.jp">info@kenichi-watashi.com</a>
+        <p class="mt-2">どうぞお気軽にお問い合せください。</p>
+      </section>
       <div class="row">
         <div class="col-sm-6">
-          <section class="wf-notosansjapanese no-gutters pb-0">
-            <h2 class="section-title">業務内容
-              <small class="section-title-en">Business Activities</small>
-            </h2>
+          <section class=" no-gutters pb-0">
+            <h2 class="section-title">業務内容</h2>
             <ul class="block-list">
               <li class="block-list-item">建築・インテリアのデザイン・設計・監修</li>
               <li class="block-list-item">展示空間・家具などのでデザイン・設計・監修</li>
@@ -168,10 +179,8 @@
           </section>
         </div>
         <div class="col-sm-6">
-          <section class="wf-notosansjapanese no-gutters">
-            <h2 class="section-title">プロフィール
-              <small class="section-title-en">profile</small>
-            </h2>
+          <section class=" no-gutters">
+            <h2 class="section-title">プロフィール</h2>
             <dl>
               <dt>1981年</dt>
               <dd>大阪生まれ</dd>
@@ -183,44 +192,44 @@
             <dl>
               <dt>2004〜2016年</dt>
               <dd>
-                <a class="d-block" href="//www.kenjihashimoto.com/" target="_blank">橋本健二建築設計事務所</a>
-                <a class="d-block" href="//www.ash-planning.co.jp/" target="_blank">株式会社アッシュプランニング</a>
+                <p class="d-block mb-0">橋本健二建築設計事務所</p>
+                <p class="d-block">株式会社アッシュプランニング</p>
               </dd>
             </dl>
-            渡司 健一 大阪府 大阪市西区 立売堀
           </section>
         </div>
       </div>
-      <section class="wf-notosansjapanese contact">
-        <h2 class="section-title">ギャラリー
-          <small class="section-title-en">gallery</small>
-        </h2>
+      <section class=" contact">
+        <h2 class="section-title">ギャラリー</h2>
         <div class="gallery-slider">
-          <div><img src="dist/images/slider/1.jpg" alt=""></div>
-          <div><img src="dist/images/slider/2.jpg" alt=""></div>
-          <div><img src="dist/images/slider/3.jpg" alt=""></div>
-          <div><img src="dist/images/slider/4.jpg" alt=""></div>
-          <div><img src="dist/images/slider/5.jpg" alt=""></div>
-          <div><img src="dist/images/slider/6.jpg" alt=""></div>
-          <div><img src="dist/images/slider/7.jpg" alt=""></div>
-          <div><img src="dist/images/slider/8.jpg" alt=""></div>
-          <div><img src="dist/images/slider/9.jpg" alt=""></div>
-          <div><img src="dist/images/slider/10.jpg" alt=""></div>
-          <div><img src="dist/images/slider/11.jpg" alt=""></div>
-          <div><img src="dist/images/slider/12.jpg" alt=""></div>
-          <div><img src="dist/images/slider/13.jpg" alt=""></div>
-          <div><img src="dist/images/slider/14.jpg" alt=""></div>
-          <div><img src="dist/images/slider/15.jpg" alt=""></div>
-          <div><img src="dist/images/slider/16.jpg" alt=""></div>
+          <div><a data-caption="a" href="dist/images/slider/1.jpg"><img src="dist/images/slider/1.jpg" alt=""></a></div>
+          <div><a data-caption="a" href="dist/images/slider/2.jpg"><img src="dist/images/slider/2.jpg" alt=""></a></div>
+          <div><a data-caption="a" href="dist/images/slider/3.jpg"><img src="dist/images/slider/3.jpg" alt=""></a></div>
+          <div><a data-caption="a" href="dist/images/slider/4.jpg"><img src="dist/images/slider/4.jpg" alt=""></a></div>
+          <div><a data-caption="a" href="dist/images/slider/5.jpg"><img src="dist/images/slider/5.jpg" alt=""></a></div>
+          <div><a data-caption="a" href="dist/images/slider/6.jpg"><img src="dist/images/slider/6.jpg" alt=""></a></div>
+          <div><a data-caption="a" href="dist/images/slider/7.jpg"><img src="dist/images/slider/7.jpg" alt=""></a></div>
+          <div><a data-caption="a" href="dist/images/slider/8.jpg"><img src="dist/images/slider/8.jpg" alt=""></a></div>
+          <div><a data-caption="a" href="dist/images/slider/9.jpg"><img src="dist/images/slider/9.jpg" alt=""></a></div>
+          <div><a data-caption="a" href="dist/images/slider/10.jpg"><img src="dist/images/slider/10.jpg" alt=""></a>
+          </div>
+          <div><a data-caption="a" href="dist/images/slider/11.jpg"><img src="dist/images/slider/11.jpg" alt=""></a>
+          </div>
+          <div><a data-caption="a" href="dist/images/slider/12.jpg"><img src="dist/images/slider/12.jpg" alt=""></a>
+          </div>
+          <div><a data-caption="a" href="dist/images/slider/13.jpg"><img src="dist/images/slider/13.jpg" alt=""></a>
+          </div>
+          <div><a data-caption="a" href="dist/images/slider/14.jpg"><img src="dist/images/slider/14.jpg" alt=""></a>
+          </div>
+          <div><a data-caption="a" href="dist/images/slider/15.jpg"><img src="dist/images/slider/15.jpg" alt=""></a>
+          </div>
+          <div><a data-caption="a" href="dist/images/slider/16.jpg"><img src="dist/images/slider/16.jpg" alt=""></a>
+          </div>
         </div>
+        <p class="mt-4">渡司 憲一</p>
+        <address>〒550-0012<br>大阪府 大阪市西区 立売堀ビルディング54号</address>
       </section>
-      <section class="wf-notosansjapanese contact">
-        <h2 class="section-title">お問い合わせ
-          <small class="section-title-en">contact</small>
-        </h2>
-        <p>お仕事のご依頼や相談などは、どうぞこちらまでお気軽にお問い合わせください</p>
-        <a href="mailto:kitamura@bre-men.jp">kitamura@bre-men.jp</a>
-      </section>
+
     </div>
   </article>
 </main>
@@ -241,10 +250,13 @@
     pauseOnHover: 'false',
   });
   $('.gallery-slider').slick({
-    centerMode: true,
-    centerPadding: '60px',
+    autoplay: true,
+    autoplaySpeed: 2000,  // スライド表示時間
+    speed: 800,  // スライドの切り替え時間
     slidesToShow: 3,
-    dots: true,
+    arrows: true,
+    dots: false,
+    accessibility:false,
     responsive: [
       {
         breakpoint: 768,
@@ -252,8 +264,8 @@
           arrows: false,
           centerMode: true,
           centerPadding: '40px',
-          slidesToShow: 3
-        }
+          slidesToShow: 3,
+        },
       },
       {
         breakpoint: 480,
@@ -261,12 +273,14 @@
           arrows: false,
           centerMode: true,
           centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
-    ]
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
-
+  $('.gallery-slider').slickLightbox({
+    caption: 'caption',
+  });
 </script>
 </body>
 </html>
